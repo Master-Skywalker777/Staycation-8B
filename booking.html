@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Booking · Staycation.dk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap">
+<link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+<div class="phone">
+
+  <header class="header">
+    <a class="logo" href="index.html">STAYCATION.dk</a>
+    <a class="burger" href="menu.html" aria-label="Åbn menu">☰</a>
+  </header>
+
+  <main>
+
+    <!-- ================= Booking ================= -->
+    <section class="screen" id="booking" aria-label="Booking">
+      <form class="booking" action="bekraeftelse.html">
+        <div class="pad">
+          <h1 class="title-lg">Gør klar til jeres tur</h1>
+          <p class="lead">Tjek datoer, gæster og jeres tilvalg.</p>
+        </div>
+
+        <div class="booking-card">
+          <img src="/images/aarhus.jpeg" alt="Den Gamle By i Aarhus">
+          <div><small>JERES HJEMMEREJSE</small><strong>Århus med børn</strong></div>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <h2>Datoer og gæster</h2>
+            <div class="fields">
+              <div class="field field--select">
+                <label class="eyebrow" for="b-dato">Ankomst og afrejse</label>
+                <input id="b-dato" name="dato" type="text" placeholder="Vælg datoer" data-date>
+              </div>
+              <div class="field field--select">
+                <label class="eyebrow" for="b-gaester">Gæster</label>
+                <select id="b-gaester" name="gaester">
+                  <option>2 Voksne ・ 2 Børn</option>
+                  <option>2 Voksne ・ 1 Barn</option>
+                  <option>2 Voksne ・ 3 Børn</option>
+                  <option>2 Voksne</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li class="step">
+            <h2>Dine oplysninger</h2>
+            <div class="fields">
+              <div class="field">
+                <label class="eyebrow" for="b-navn">Fulde navn</label>
+                <input id="b-navn" name="navn" type="text" autocomplete="name" placeholder="Indtast dit navn" required pattern="\p{L}+(['\-]\p{L}+)*( \p{L}+(['\-]\p{L}+)*)+" title="Skriv både fornavn og efternavn" aria-describedby="b-navn-fejl">
+                <p class="field_error" id="b-navn-fejl">Skriv både fornavn og efternavn.</p>
+              </div>
+              <div class="field">
+                <label class="eyebrow" for="b-email">E-mail</label>
+                <input id="b-email" name="email" type="email" autocomplete="email" placeholder="Indtast din e-mail" required pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}" title="Fx navn@mail.dk" aria-describedby="b-email-fejl">
+                <p class="field_error" id="b-email-fejl">Skriv en gyldig e-mail, fx navn@mail.dk.</p>
+              </div>
+              <div class="field">
+                <label class="eyebrow" for="b-tlf">Telefon</label>
+                <input id="b-tlf" name="tlf" type="tel" inputmode="tel" autocomplete="tel" placeholder="Indtast dit telefonnummer" required pattern="(\+45 ?)?(\d{2} ?){3}\d{2}" title="8 cifre, fx 12 34 56 78" aria-describedby="b-tlf-fejl">
+                <p class="field_error" id="b-tlf-fejl">Skriv 8 cifre, fx 12 34 56 78.</p>
+              </div>
+            </div>
+          </li>
+          <li class="step">
+            <h2>Overblik før booking</h2>
+            <div class="summary">
+              <dl class="plain">
+                <dt>Ophold</dt><dd>pris DKK</dd>
+                <dt>Tilvalg:<br>Tivoli Friheden</dt><dd>pris DKK</dd>
+                <div class="divider"></div>
+                <div class="row-total" style="display:contents"><dt>Samlet pris</dt><dd>Total DKK</dd></div>
+                <p class="note">Den samlede pris afhænger af datoer, gæster og de valgte tilvalg.</p>
+              </dl>
+            </div>
+            <label class="consent" for="b-accept">
+              <input type="checkbox" id="b-accept" required aria-describedby="b-accept-fejl">
+              <span>Jeg accepterer bookingbetingelserne og har læst privatlivspolitikken.</span>
+            </label>
+            <p class="consent_error" id="b-accept-fejl">Du skal acceptere betingelserne for at booke.</p>
+          </li>
+        </ol>
+
+        <button class="btn" type="submit">Bekræft booking →</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer_brand"><a href="index.html">Staycation.dk</a></p>
+    <p class="footer_tag"><a href="#oplev-mere">Oplev mere. Rejs mindre.</a></p>
+    <div class="footer_group">
+      <p class="eyebrow">Udforsk</p>
+      <p><a href="vaelg-tur.html">Hjemmerejser</a> · <a href="index.html#oplevelser">Oplevelser</a></p>
+    </div>
+    <div class="footer_group footer_links">
+      <p class="eyebrow"><a href="om-os.html">Om os</a></p>
+      <p><a href="om-os.html">Kontakt</a> · <a href="om-os.html">Samarbejder</a> · <a href="om-os.html">Job</a></p>
+    </div>
+    <p class="footer_cvr">CVR. 12341234</p>
+  </footer>
+
+</div>
+</body>
+</html>

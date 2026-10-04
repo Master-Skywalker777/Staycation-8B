@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Staycation.dk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap">
+<link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+<div class="phone">
+
+  <header class="header">
+    <a class="logo" href="index.html">STAYCATION.dk</a>
+    <a class="burger" href="menu.html" aria-label="Åbn menu">☰</a>
+  </header>
+
+  <main>
+
+    <!-- ================= Forside ================= -->
+    <section class="screen" id="forside">
+      <div class="hero">
+        <img src="/images/strand.jpeg" alt="Familie der går langs vandkanten i solnedgang">
+        <div class="hero_shade"></div>
+        <div class="hero_text">
+          <p class="eyebrow">Der er mere lige om hjørnet</p>
+          <h1>Din næste ferie<br>er tæt på</h1>
+        </div>
+      </div>
+
+      <form class="search" action="vaelg-tur.html">
+        <h2>Find din hjemmerejse</h2>
+        <div class="search_rows">
+          <label class="srow" for="s-hvor">
+            <span class="srow_icon" aria-hidden="true">⌕</span>
+            <span><span class="eyebrow">Hvor?</span>
+              <input id="s-hvor" name="hvor" type="text" placeholder="Hele Danmark eller vælg et sted"></span>
+            <span class="srow_chev" aria-hidden="true">⌄</span>
+          </label>
+          <label class="srow" for="s-hvornaar">
+            <span class="srow_icon" aria-hidden="true">▣</span>
+            <span><span class="eyebrow">Hvornår?</span>
+              <input id="s-hvornaar" name="hvornaar" type="text" placeholder="Vælg datoer eller vær fleksibel" data-date></span>
+            <span class="srow_chev" aria-hidden="true">⌄</span>
+          </label>
+          <label class="srow" for="s-hvem">
+            <span class="srow_icon" aria-hidden="true">♙</span>
+            <span><span class="eyebrow">Hvem rejser?</span>
+              <select id="s-hvem" name="hvem">
+                <option>To voksne - tilføj børn</option>
+                <option>2 voksne · 1 barn</option>
+                <option>2 voksne · 2 børn</option>
+                <option>2 voksne · 3 børn</option>
+                <option>1 voksen</option>
+                <option>Vennegruppe</option>
+              </select></span>
+            <span class="srow_chev" aria-hidden="true">⌄</span>
+          </label>
+        </div>
+        <a class="btn" href="vaelg-tur.html">Find en tur →</a>
+        <a class="search_alt" href="#inspiration">Jeg vil hellere inspireres ↓</a>
+      </form>
+
+      <div class="inspire" id="inspiration">
+        <h2>Hvad har du lyst til?</h2>
+        <div class="chips" role="radiogroup">
+          <label class="chip"><input type="radio" name="tema" id="tema-born" checked>Med børn</label>
+          <label class="chip"><input type="radio" name="tema" id="tema-venner">Venner</label>
+          <label class="chip"><input type="radio" name="tema" id="tema-kultur">Kultur &amp; mad</label>
+        </div>
+
+        <!-- Forside: Med børn -->
+        <div class="theme theme--born">
+          <h2>Oplev Danmark på en ny måde</h2>
+          <a class="feature" href="vaelg-tur.html">
+            <img src="/images/aarhus.jpeg" alt="Den Gamle By i Aarhus">
+            <span class="feature_bar">
+              <span class="eyebrow">Kultur · Byliv · Familie</span>
+              <strong>To dage i Aarhus <span>→</span></strong>
+            </span>
+          </a>
+          <div class="tiles">
+            <div class="tile">
+              <img src="/images/mad02.jpeg" alt="Mor, Far og barn der laver mad">
+              <p>Mad &amp; nærvær</p>
+            </div>
+            <div class="tile">
+              <img src="/images/tivoli.jpg" alt="Tivoli med rutsjebane">
+              <p>Kultur &amp; leg</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forside 2: Venner -->
+        <div class="theme theme--venner">
+          <h2>Ferier med venner</h2>
+          <a class="feature" href="vaelg-tur.html">
+            <img src="/images/svendborg.jpeg" alt="Svendborg havn med sejlbåde">
+            <span class="feature_bar">
+              <span class="eyebrow">Sydfyn · 2-3 dage · Venner</span>
+              <strong>En weekend i Svendborg <span>→</span></strong>
+            </span>
+          </a>
+          <div class="tiles">
+            <div class="tile">
+              <img src="/images/mad.jpeg" alt="Anrettet mad på en tallerken">
+              <p>Mad &amp; vin</p>
+            </div>
+            <div class="tile">
+              <img src="/images/havn.jpeg" alt="Havnefront om aftenen">
+              <p>Aftener ved havnen</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer_brand"><a href="index.html">Staycation.dk</a></p>
+    <p class="footer_tag"><a href="#oplev-mere">Oplev mere. Rejs mindre.</a></p>
+    <div class="footer_group">
+      <p class="eyebrow">Udforsk</p>
+      <p><a href="vaelg-tur.html">Hjemmerejser</a> · <a href="#oplevelser">Oplevelser</a></p>
+    </div>
+    <div class="footer_group footer_links">
+      <p class="eyebrow"><a href="om-os.html">Om os</a></p>
+      <p><a href="om-os.html">Kontakt</a> · <a href="om-os.html">Samarbejder</a> · <a href="om-os.html">Job</a></p>
+    </div>
+    <p class="footer_cvr">CVR. 12341234</p>
+  </footer>
+
+</div>
+</body>
+</html>
